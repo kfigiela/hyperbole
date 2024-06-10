@@ -125,3 +125,9 @@ Watch for file changes and recompile everything
 ```
 bin/dev
 ```
+
+Contributors
+------------
+
+* [Sean Hess](seanhess)
+* [Kamil Figiela](https://github.com/kfigiela)
