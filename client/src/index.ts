@@ -17,6 +17,7 @@ console.log("Hyperbole 0.3.3a")
 
 
 let rootStyles: HTMLStyleElement;
+let addedRulesIndex = new Set();
 
 
 async function sendAction(msg:ActionMessage) {
@@ -108,7 +109,7 @@ async function runAction(target:HTMLElement, action:string, form?:FormData) {
   }
 
   // First, update the stylesheet
-  addCSS(res.css.textContent)
+  addCSS(res.css)
 
   // Patch the node
   let next:VNode = create(res.content)
@@ -130,11 +131,14 @@ async function runAction(target:HTMLElement, action:string, form?:FormData) {
 }
 
 
-function addCSS(text:string) {
-  let rules = text.split("\n")
-  rules.forEach((rule) => {
-    if(rule != "") rootStyles.sheet.insertRule(rule)
-  })
+function addCSS(src:HTMLStyleElement) {
+  const rules:any = src.sheet.cssRules
+  for (const rule of rules) {
+    if(addedRulesIndex.has(rule.cssText) == false) {
+      rootStyles.sheet.insertRule(rule.cssText);
+      addedRulesIndex.add(rule.cssText);
+    }
+  }
 }
 
 type Response = {

@@ -1,5 +1,4 @@
-/dist-newstyle/
-/dist/
+dist-newstyle
 .DS_Store
 tags
-/client/node_modules/
+node_modules

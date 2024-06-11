@@ -1,16 +1,13 @@
 Hyperbole Examples
 ===================
 
-This directory contains an example application with multiple pages demonstrating different features.
-
-To them to try it out!
+This directory contains an example application with multiple pages demonstrating different features. To try them out:
 
 ```
-cabal run
+cabal run examples
 ```
 
-Then visit http://localhost:3000/ in your browser
-
+Then visit http://localhost:3000/
 
 ### [Main](./Main.hs)
 Routing, WAI application, running the program
