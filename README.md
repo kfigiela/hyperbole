@@ -1,7 +1,7 @@
 Hyperbole
 =========
 
-[![Hackage](https://img.shields.io/hackage/v/hyperbole.svg)](https://hackage.haskell.org/package/hyperbole) 
+[![Hackage](https://img.shields.io/hackage/v/hyperbole.svg)](https://hackage.haskell.org/package/hyperbole)
 
 Create fully interactive HTML applications with type-safe serverside Haskell. Inspired by [HTMX](https://htmx.org/), [Elm](https://elm-lang.org/), and [Phoenix LiveView](https://www.phoenixframework.org/)
 
@@ -107,8 +107,7 @@ cd client
 npx webpack
 ```
 
-
-Run examples (requires building the JS client) 
+Run examples
 
 ```
 cabal run examples
